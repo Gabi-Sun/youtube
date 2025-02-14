@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header img {
+    height: 1.875rem;
+}
+
+.icon {
+    padding: 0.625rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.625rem;
+}
+
+.profile, .search, .youtube {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    border-radius: 1.25rem;
+    padding-left: 0.9375rem;
+    width: 25rem;
+    height: 1.5625rem;
+}
+
+.user img {
+    border-radius: 1.25rem;
+}
+
+img.user {
+    height: 2.5rem;
+    border-radius: 3.125rem;
+}
+
+img.tumb {
+    height: 13rem;
+    width: 23rem;
+    border-radius: 0.625rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    grid-area: main;
+}
+
+.video {
+    width: 22.5rem;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+}
+
+aside img {
+    height: 1.875rem;  
+}
+
+body {
+    display: grid;
+    grid-template-columns: 12.5rem 1fr;
+    grid-template-rows: 5rem 1fr;
+    grid-template-areas: 
+        "header header" 
+        "aside main";
+}
+
+header {
+    grid-area: header;
+}
+
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-left: 0.625rem;
+
+}
+
+aside .menu {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+@media (max-width: 1300px) {
+    .menu p {
+        display: none !important;
+    }
+
+    body {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-template-rows: 5rem 1fr;
+    grid-template-areas: 
+        "header header" 
+        "aside main";
+    }
+}
+
+@media (max-width: 1080px) {
+    body {
+        display: grid;
+        grid-template-columns: 0rem 1fr;
+        grid-template-rows: 5rem 1fr;
+        grid-template-areas: 
+            "header header" 
+            "aside main";
+        }
+}
